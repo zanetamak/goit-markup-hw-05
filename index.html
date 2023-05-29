@@ -53,7 +53,7 @@
     <section class="hero-container section">
         <div class="container">
         <h1 class="h1-webstudio">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-        <div class="button-position"><button class="button-webstudio" type="button">Zamów usługe</button></div>
+        <div class="button-position"><button class="button-webstudio" type="button" data-modal-open>Zamów usługe</button></div>
         </div>
     </section>
 <!--Atuty-->
@@ -348,5 +348,12 @@
                 </div>
             </div>
     </footer>
+<div class="backdrop is-hidden" data-modal>
+<div class="modal">
+    <button type="button" class="close-btn" data-modal-close></button>
+</div>
+</div>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
