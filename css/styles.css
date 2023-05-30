@@ -241,11 +241,11 @@ justify-content: center;
 .features-picture:last-child {
    margin-right: 0
 }
+/* about + img index ====================================== */
 
 .list-img {
 display: flex; 
    }   
-/* about + img index ====================================== */
 
 .about-title {
    font-weight: 700;
@@ -256,24 +256,22 @@ display: flex;
    margin-bottom: 50px;
 }
 
-.list-img {
-   display: flex;
-}
-
 .about-img {
    
  margin-right: 30px;
+ position: relative;
 list-style-type: none;
+overflow: hidden;
 }
 
-.about-img > .about-img-text {
+.about-img > .label {
    position: absolute;
    font-weight: 700;
    font-size: 14px;
    line-height: 1.14;
-   text-align: center;
+   align-items: center;
    justify-content: center;
-   width: 370px;
+   width: 100%;
    height: 70px;
    bottom: 0;
    letter-spacing: 0.03em;
@@ -281,8 +279,8 @@ list-style-type: none;
    color: var(--main-background);
    display: flex;
    background-color: rgba(47, 48, 58, 0.8);
+ 
 }
-
 /* team ====================================== */
 
 .team {
@@ -495,9 +493,41 @@ box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
    font-size: 18px;
    line-height: 2;
    letter-spacing: 0.06em;
-   color: rgba(33, 33, 33, 1)
 }
 
+.box {
+   position: relative;
+      width: 370px;
+      height: 294px;
+      overflow: hidden;
+}
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(33, 150, 243, 0.9);
+
+      transform: translatey(100%);
+      transition: transform 250ms ease-in-out;
+}
+
+      .box:hover .overlay {
+            transform: translatex(0);
+      }
+   
+.overlay-text {
+   font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.5;
+      letter-spacing: 0.03em;
+      color: var(--main-background);
+      margin: 49px 45px 49px 24px
+
+}
 /* stopka =======================================*/
 
 
@@ -632,7 +662,7 @@ color: var(--focus-color);
    height: 581px;
    background-color: rgba(255, 255, 255, 1);
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 4px;
+   border-radius: 4px;
 }
 
 .close-btn {
